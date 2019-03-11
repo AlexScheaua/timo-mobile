@@ -1,27 +1,29 @@
-var obiect = {}
-var container = document.querySelector("#container")
+let obiect = {}
+let container = document.querySelector("#container");
+let selector = document.querySelector("#selector");
 
 function buttonEvent(){
-  var buton = document.querySelector("#ajax-req");
+  let buton = document.querySelector("#ajax-req");
   buton.addEventListener("click",function(){
-    ajax();
+    let selectorValue = selector.value;
+    ajax(selectorValue);
   })
 }
 
 
-function ajax(){
-  var xhttp = new XMLHttpRequest();
+function ajax(idx){
+  let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         obiect = JSON.parse(this.responseText);
         draw();
     }
   };
-  xhttp.open("GET", "https://scoala-informala-ba5c7.firebaseio.com/.json", true);
+  xhttp.open("GET", `https://timospeed-dial.firebaseio.com/${idx}/.json`, true);
   xhttp.send();
 }
 
-function draw(){
+function draw(idx){
   container.innerHTML = `<a id="phone-number" href="tel:${obiect.phoneNumber}">${obiect.phoneNumber}</a>`
 }
 
