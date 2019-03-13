@@ -16,7 +16,11 @@ function ajax(idx){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         obiect = JSON.parse(this.responseText);
-        draw();
+        if(obiect === null){
+          alert("Please select a workstation")
+        } else {
+          draw();
+        }
     }
   };
   xhttp.open("GET", `https://timospeed-dial.firebaseio.com/${idx}/.json`, true);
