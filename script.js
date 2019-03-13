@@ -3,7 +3,7 @@ let container = document.querySelector("#container");
 let selector = document.querySelector("#selector");
 
 function buttonEvent(){
-  let buton = document.querySelector("#ajax-req");
+  let refreshButton = document.querySelector("#ajax-req");
   buton.addEventListener("click",function(){
     let selectorValue = selector.value;
     ajax(selectorValue);
@@ -34,6 +34,11 @@ function draw(idx){
   setTimeout(function(){
     phoneNumber.style.color = "blue";
   },2000)
+  let refreshButton = document.querySelector("#ajax-req");
+   buton.style.backgroundColor = "#777";
+  setTimeout(function(){
+    buton.style.backgroundColor = "#aaa";
+  },300)
   
 }
 
