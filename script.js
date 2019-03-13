@@ -4,7 +4,7 @@ let selector = document.querySelector("#selector");
 
 function buttonEvent(){
   let refreshButton = document.querySelector("#ajax-req");
-  buton.addEventListener("click",function(){
+  refreshButton.addEventListener("click",function(){
     let selectorValue = selector.value;
     ajax(selectorValue);
   })
