@@ -35,9 +35,9 @@ function draw(idx){
     phoneNumber.style.color = "blue";
   },2000)
   let refreshButton = document.querySelector("#ajax-req");
-   buton.style.backgroundColor = "#777";
+    refreshButton.style.backgroundColor = "#777";
   setTimeout(function(){
-    buton.style.backgroundColor = "#aaa";
+    refreshButton.style.backgroundColor = "#aaa";
   },300)
   
 }
