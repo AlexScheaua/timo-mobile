@@ -30,10 +30,10 @@ function ajax(idx){
 function draw(idx){
   container.innerHTML = `<a id="phone-number" href="tel:${obiect.phoneNumber}">${obiect.phoneNumber}</a>`
   let phoneNumber = document.querySelector("#phone-number");
-  phoneNumber.style.color = "red";
+  phoneNumber.style.color = "green";
   setTimeout(function(){
     phoneNumber.style.color = "blue";
-  },2000)
+  },1000)
   let refreshButton = document.querySelector("#ajax-req");
     refreshButton.style.backgroundColor = "#777";
   setTimeout(function(){
