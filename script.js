@@ -25,6 +25,12 @@ function ajax(idx){
 
 function draw(idx){
   container.innerHTML = `<a id="phone-number" href="tel:${obiect.phoneNumber}">${obiect.phoneNumber}</a>`
+  let phoneNumber = document.querySelector("#phone-number");
+  phoneNumber.style.color = "red";
+  setTimeout(function(){
+    phoneNumber.style.color = "blue";
+  },2000)
+  
 }
 
 buttonEvent();
