@@ -20,6 +20,8 @@ function ajax(idx){
           alert("Please select a workstation")
         } else {
           draw();
+          let phoneNumber = document.querySelector("#phone-number");
+          phoneNumber.click();
         }
     }
   };
